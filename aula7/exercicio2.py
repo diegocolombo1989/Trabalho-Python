@@ -13,4 +13,4 @@ for i in range(1,3):
     dicionario_jogadores ['pernaboa'] = input('Qual sua perna boa: ')
 
 lista.append(dicionario_jogadores)
-print(f"{dicionario_jogadores['Nome']}'' - Posicao:'{dicionario_jogadores['Posicao']} - numero:'{dicionario_jogadores['numero']} - Perna Boa:'{dicionario_jogadores['pernaboa']}"
+print(f"{dicionario_jogadores['Nome']} - Posicao: {dicionario_jogadores['Posicao']} - numero: {dicionario_jogadores['numero']} - Perna Boa: {dicionario_jogadores['pernaboa']}"}
