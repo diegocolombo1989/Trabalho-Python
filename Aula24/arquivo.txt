@@ -1,0 +1,14 @@
+
+
+
+dadobruto = [cod, nome, idade, sexo, email, telefone]
+
+
+def salvar(self, arq):
+    self.codigo = cod
+    self.nome = name
+    self.idade = age
+    self. sexo = sex
+    self. email = mail  
+    self. telefone = fone
+    return salvar
