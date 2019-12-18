@@ -27,30 +27,3 @@
 # Refrigerante R$ 0,01 /ml 
 # Cerveja ipa  R$ 0,05 /ml 
 # Cerveja ale  R$ 0,063 /ml 
-
-
-
-class Cliente:
-    alco = 1
-    naoalc = 2
-
-    def __init__ (self, nome, idade, telefone):
-        self.lista = []
-        self.nome = input('Digite seu nome: ')
-        self.idade = int(input('Digite sua idade: '))
-        self.telefone = input('Digite seu telefone: ')
-        self.lista.append()
-
-    def cartao (self,saldo):
-        for dinheiro in saldo:
-            if dinheiro > 0:
-                dinheiro += saldo
-                for dinheiro in saldo:
-                    dinheiro -= saldo
-                    for saldo in saldo:
-                        print(saldo)
-
-cliente = (lista)
-cartao = ()
-
-print(cliente)

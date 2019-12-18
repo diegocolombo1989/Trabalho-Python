@@ -20,21 +20,21 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 6 - Relatório de Vendas
 7 - Sair
 
-'Digite a opção desejada:') '''
+Digite a opção desejada: '''
 opcao = (menu)
 while True:
     opcao = input(menu)
-    if opcao == '1':
+    if opcao == 1:
        print('Cadastro de Cliente')
-    elif opcao == '2':
+    elif opcao == 2:
        print('Ver Clientes Cadastrados')
-    elif opcao == '3':
+    elif opcao == 3:
        print('Cadastro de Produtos')
-    elif opcao == '4':
+    elif opcao == 4:
        print('Ver Produtos Cadastrados')
-    elif opcao == '5':
+    elif opcao == 5:
        print('Vendas')
-    elif opcao == '6':
+    elif opcao == 6:
        print('Relatório de Vendas')
     elif opcao == '7':
         print('Sair')
