@@ -1,40 +1,32 @@
-#--- Exercicio 3  - Input, Estrutura de decisão e operações matemáticas
-#--- Crie um programa que leia os dados de um funcionário
-#--- Funcionário: Nome Completo, CPF, Número do registro, Cargo e Salário
-#--- Exiba os dados de salário liquido, descontando os tributos
-#--- Deve ser calculado o valor do INSS -
-#--- INSS -  de    0,00 ate 1751,81 - percetual =  8,0%
-#---         de 1751,82 ate 2919,72 - percetual =  9,5%
-#---         de 2919,72 ate 5839,45 - percetual = 11,0%
-#--- Deve ser calculado o valor do IRRF - 
-#--- IRRF -  de    0,00 ate 1903,98 - percetual =  0,0%
-#---         de 1903,98 ate 2826,65 - percetual =  7,5%
-#---         de 2826,66 ate 3751,05 - percetual = 15,0%
-#---         de 3751,06 ate 4664,68 - percetual = 22,5%
-#---         de 4664,69 ate ------- - percetual = 27,5%
-#--- Base - http://www.calculador.com.br/calculo/salario-liquido
+# Aula 9 - 19-11-2019
+#--- Crie um programa que:
+#--- 1- Leia dois numeros inteiros
+#--- 2- Calcule a soma entre os dois numeros atraves de um metodo
+#--- 3- Calcule a subtracao entre os dois numeros atraves de um metodo
+#--- 4- Calcule a multiplicacao entre os dois numeros atraves de um metodo
+#--- 5- Calcule a divisao inteira entre os dois numeros atraves de um metodo
+#--- 6- Calcule a divisao fracionada entre os dois numeros atraves de um metodo
+#--- 7- Calcule resto da divisao entre os dois numeros atraves de um metodo
+#--- 8- Calcule a raiz entre os dois numeros atraves de um metodo
+#--- 9- Separa os metodos em outro arquivo 
 
+#--- soma Tarcisio
+#--- subtracao Vitor
+#--- multi Nathan
+#--- div int Victor
+#--- div frac Pedro
+#--- resto Renan
+#--- raiz George
 
-from aula9_imposto import calculo_inss, calculo_irrf
+from calculo import soma, subtracao, multiplicacao, div, divF, restodiv, raiz
 
+n1 = int(input('\n Digite um numero: '))
+n2 = int(input('\n Digite outro numero: '))
 
-print('='*50, '\n')
-
-salario = float( input('Digite seu salario:') )
-
-inss = calculo_inss(salario)
-irrf = calculo_irrf(salario, inss)
-
-salario_liquido = salario - inss - irrf
-print(f'Inss: {inss}')
-print(f'Irrf: {irrf}')
-print(f'Seu salário liquido é {salario_liquido}')
-
-print( '\n'*2,'='*50)
-
-
-
-# nome_completo = input('Digite seu nome completo:')
-# cpf = input('Digite seu cpf:')
-# num_registro = int( input('Digite seu registro:') )
-# cargo = input('Digite seu cargo:')
+print(f'\n A soma entre {n1} e {n2} é: {soma(n1,n2)}')
+print(f'\n A subtração entre {n1} e {n2} é: {subtracao(n1,n2)}')
+print(f'\n A multiplicaçao entre {n1} e {n2} é: {multiplicacao(n1,n2)}')
+print(f'\n A divisao inteira entre {n1} e {n2} é: {div(n1,n2)}')
+print(f'\n A divisão fracionária entre {n1} e {n2} é: {divF(n1,n2)}')
+print(f'\n O resto da divisão entre {n1} e {n2} é: {restodiv(n1,n2)}')
+print(f'\n A raiz é: {raiz(n1,n2)}')

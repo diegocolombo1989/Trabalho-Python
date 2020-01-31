@@ -1,8 +1,9 @@
+# Aula 10 - 20-11-2019
+# 
+#--- Web - Calculadora
 nome_pagina = 'Calculadora'
-
 from flask import Flask, render_template, request
-
-from aula9_calc import *
+from calculo import *
 
 app = Flask(__name__)
 
@@ -14,16 +15,23 @@ def home():
 def calcular():
     n1 = int(request.args['numero1'])
     n2 = int(request.args['numero2'])
-    soma1 = soma(n1,n2)
-    subtracao1 = subtracao(n1,n2)
-    multiplicacao = mult(n1,n2)
-    divisao_inteira = div_inteira(n1,n2)
-    divisao_fracionada = div_frac(n1,n2)
-    resto1 = resto_div(n1,n2)
-    raiz1 = raiz(n1,n2)
-    resultados = {'soma':soma1, 'subtracao':subtracao1, 'multiplicacao': multiplicacao, 'divisao_inteira':divisao_inteira, 'divisao_fracionada':divisao_fracionada, 'resto': resto1, 'raiz':raiz1}
+    r_soma = soma(n1,n2)
+    r_subtracao = subtracao(n1,n2)
+    r_multiplicacao = multiplicacao(n1,n2)
+    r_divisao_inteira = divisao_inteira(n1,n2)
+    r_divisao_fracionada = divisao_fracionada(n1,n2)
+    r_resto = resto(n1,n2)
+    r_raiz = raiz(n1,n2)
+    resultados = { 
+        'soma' : r_soma
+        ,'subtracao' : r_subtracao
+        ,'multiplicacao' : r_multiplicacao
+        ,'divisao_inteira' : r_divisao_inteira
+        ,'divisao_fracionada' : r_divisao_fracionada
+        ,'resto' : r_resto
+        ,'raiz' : r_raiz
+    }
 
-    return render_template(
-        'resultado.html', n1 = n1, n2 = n2, resultados = resultados)
+    return render_template( 'resultado.html' ,n1 = n1 ,n2=n2 ,resultados = resultados)
 
 app.run()
