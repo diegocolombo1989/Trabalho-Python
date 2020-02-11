@@ -11,8 +11,10 @@ class ProdutoDao:
             self.cursor = cursor.execute("SELECT * FROM produto")
             produto = self.cursor.fetchall()
             lista_produto = []
-
             for p in produto:
                 produto = ProdutoModel(p[1], p[2], p[0])
                 lista_produto.append(produto.__dict__)
             return lista_produto
+
+        def get_by_id(self, id):
+            self.cursor.execute()
